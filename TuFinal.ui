@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1120</width>
+    <height>970</height>
+   </rect>
+  </property>
+  <property name="tabletTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>TUBIN Image Catalog</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_13">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>appdata/logoTu-reduced.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>This application is TubCloud browser and downloader for Tubin Satellite and developed by the User Segment team druing WS22/23.</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="0,8">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="frameShape">
+               <enum>QFrame::HLine</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Scene Center</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>Longitude:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="slon">
+                <property name="minimum">
+                 <double>-180.000000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>180.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>Latittude:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="slat">
+                <property name="minimum">
+                 <double>-90.000000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>90.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>Search radius:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="srad">
+                <property name="minimum">
+                 <double>10.000000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>1000.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_17">
+              <item>
+               <widget class="QCheckBox" name="sspace">
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>Space looking</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="snofilter">
+                <property name="text">
+                 <string>No Filter</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="frameShape">
+               <enum>QFrame::HLine</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_9">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Image Content</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="squality">
+              <property name="text">
+               <string>Quality:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="squalityval">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>9</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="scloud">
+              <property name="text">
+               <string>Cloud:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="scloudval">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="swater">
+              <property name="text">
+               <string>Water:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="swaterval">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QCheckBox" name="smoon">
+                <property name="text">
+                 <string>Only moon</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="sfire">
+                <property name="text">
+                 <string>Only Fire</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_13">
+              <property name="frameShape">
+               <enum>QFrame::HLine</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_14">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Imaging Environment:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="snight">
+              <property name="text">
+               <string>Only Night</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="stime">
+              <property name="text">
+               <string>Local Time in Hour Between:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QSpinBox" name="stimemin">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string/>
+                </property>
+                <property name="maximum">
+                 <number>24</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="stimemax">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string/>
+                </property>
+                <property name="maximum">
+                 <number>24</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="ssun">
+              <property name="text">
+               <string>Sun Elevation:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QSpinBox" name="ssunmin">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string/>
+                </property>
+                <property name="maximum">
+                 <number>90</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="ssunmax">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="suffix">
+                 <string/>
+                </property>
+                <property name="maximum">
+                 <number>90</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_15">
+              <property name="frameShape">
+               <enum>QFrame::HLine</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_16">
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Sensor Paramters:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>Sensor Type:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QCheckBox" name="sir">
+                <property name="text">
+                 <string>IR</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="svis">
+                <property name="text">
+                 <string>VIS</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <item>
+               <widget class="QCheckBox" name="slook">
+                <property name="text">
+                 <string>Look Angle:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_17">
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_18">
+                <property name="text">
+                 <string>&lt;span&gt;&amp;#8804;x&amp;#8804;&amp;nbsp;&lt;/span&gt;</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_12">
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>2</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QSlider" name="slookmin">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimum">
+               <number>0</number>
+              </property>
+              <property name="maximum">
+               <number>360</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="slookmax">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="maximum">
+               <number>360</number>
+              </property>
+              <property name="value">
+               <number>2</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="sfilter">
+              <property name="text">
+               <string>Apply Filter </string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTabWidget" name="tabWidget">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="Static">
+             <attribute name="title">
+              <string>Static</string>
+             </attribute>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <item>
+               <widget class="QWidget" name="ssmap" native="true"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="Dynamic">
+             <attribute name="title">
+              <string>Dynamic</string>
+             </attribute>
+             <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="0,2">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,0">
+                  <item>
+                   <widget class="QPushButton" name="sBsrt">
+                    <property name="text">
+                     <string>sort</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="sCsrt">
+                    <item>
+                     <property name="text">
+                      <string>None</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Name</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Camera</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Look angle</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Sun elevation</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Local time</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>Geo. distance</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_2">
+                  <item>
+                   <widget class="QTableWidget" name="stable">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <column>
+                     <property name="text">
+                      <string>Image Name</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="0,0">
+                    <item>
+                     <widget class="QPushButton" name="sBdwn">
+                      <property name="text">
+                       <string>Download</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="sCdwn">
+                      <item>
+                       <property name="text">
+                        <string>Selected</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>All</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,8,0">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="0,4,0">
+                  <item>
+                   <widget class="QPushButton" name="sBdel">
+                    <property name="text">
+                     <string>Empty Temp. Folder</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="smap">
+                    <property name="text">
+                     <string>Show on Map</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QLabel" name="ssat">
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap>appdata/Tubin4.svg</pixmap>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTextBrowser" name="textMeta"/>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1120</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>Setting</string>
+    </property>
+    <addaction name="actionTubCloud_link"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSetting"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open file</string>
+   </property>
+  </action>
+  <action name="actionTubCloud_link">
+   <property name="text">
+    <string>TubCloud link</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>sspace</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>srad</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>77</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>149</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sspace</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>swater</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sspace</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scloud</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>313</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>56</x>
+     <y>436</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>swater</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>swaterval</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>477</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>78</x>
+     <y>494</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>scloud</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>scloudval</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>94</x>
+     <y>453</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>squality</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>squalityval</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>50</x>
+     <y>412</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sfire</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>smoon</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>172</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>90</x>
+     <y>519</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>snight</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>stime</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>601</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>155</x>
+     <y>625</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>snight</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ssun</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>601</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>677</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stime</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ssun</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>96</x>
+     <y>625</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>92</x>
+     <y>677</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stime</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>snight</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>625</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>72</x>
+     <y>601</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ssun</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>stime</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>53</x>
+     <y>677</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>58</x>
+     <y>625</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ssun</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>snight</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>42</x>
+     <y>677</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>41</x>
+     <y>601</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stime</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>stimemin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>28</x>
+     <y>625</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>651</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stime</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>stimemax</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>625</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>651</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ssun</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ssunmin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>677</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>74</x>
+     <y>703</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ssun</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ssunmax</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>141</x>
+     <y>677</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>703</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>scloud</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>smoon</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>32</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>38</x>
+     <y>519</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>scloud</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>sspace</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>436</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>100</x>
+     <y>313</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>swater</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>sspace</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>173</x>
+     <y>477</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>100</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>swater</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>smoon</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>144</x>
+     <y>477</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>74</x>
+     <y>519</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slookmax</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_12</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>880</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>845</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slook</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>slookmax</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>62</x>
+     <y>844</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>64</x>
+     <y>880</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slookmin</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_17</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>126</x>
+     <y>863</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>116</x>
+     <y>845</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slook</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>slookmin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>42</x>
+     <y>844</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>41</x>
+     <y>863</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
