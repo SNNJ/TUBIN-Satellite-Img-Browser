@@ -1,4 +1,3 @@
-# this is for checking the filtering and these things
 import pandas as pd
 import geopy.distance
 class Cdb:
