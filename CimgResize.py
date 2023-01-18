@@ -33,14 +33,11 @@ class CimgResize:
             shutil.copy("./temp/" + self.img2reduce, "./temp/img4map%s" % self.img2reduce)
 
 
-        # This is to get the directory that the program
 
 
     def fsearch(self):        # is currently running in.
         for root, dirs, files in os.walk('./temp'):
             for file in files:
-                # change the extension from '.mp3' to
-                # the one of your choice.
                 if file.startswith('img4map' + self.img2reduce):
                     print(root + '/' + str(file))
                     return (True,str(file))
